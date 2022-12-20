@@ -1,0 +1,31 @@
+<form [formGroup]="datosPelicula" class="form-group container w-50 mt-3">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="titulo" formControlName="titulo" />
+      <label for="titulo">Titulo</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="director" formControlName="director" />
+      <label for="director">Director</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="number" class="form-control" id="duracion" formControlName="duracion" />
+      <label for="duracion">Duracion</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="genero" formControlName="genero" />
+      <label for="genero">Genero</label>
+    </div>
+    
+    <button
+      class="btn btn-primary m-2"
+      (click)="guardar()"
+      [disabled]="!datosPelicula.valid"
+    >
+      Guardar
+    </button>
+
+    
+  
+    <button class="btn btn-danger m-2" (click)="cancel()">Volver</button>
+    
+  </form>

@@ -1,0 +1,13 @@
+<div class="card w-50" *ngIf="pelicula">
+    <div class="card-body">
+      <h5 class="card-title">{{ pelicula.data.titulo }}</h5>
+      <p class="card-text">{{ pelicula.data.director }}</p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ pelicula.data.duracion }}</li>
+        <li class="list-group-item">{{ pelicula.data.genero }}</li>
+        
+      </ul>
+      <a routerLink="/edit/{{pelicula.id}}" class="btn btn-primary">Editar</a>
+     
+    </div>
+  

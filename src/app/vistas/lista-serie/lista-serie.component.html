@@ -1,0 +1,13 @@
+<div class="container w-50 mt-3">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let serie of listaSerie">
+        <a (click)="selectSerie(serie)" class="list-group-item-action">
+          {{ serie.data.titulo }}
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+ 
+  <app-detalle-pelicula [pelicula]="selectedSerie"></app-detalle-pelicula>
+

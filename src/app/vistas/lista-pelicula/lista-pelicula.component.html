@@ -1,0 +1,12 @@
+<div class="container w-50 mt-3">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let pelicula of listaPelicula">
+        <a (click)="selectPelicula(pelicula)" class="list-group-item-action">
+          {{ pelicula.data.titulo }}
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+ 
+  <app-detalle-pelicula [pelicula]="selectedPelicula"></app-detalle-pelicula>
